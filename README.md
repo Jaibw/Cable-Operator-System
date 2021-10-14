@@ -47,7 +47,7 @@ java -jar path/abc.jar
 ## Generating Docker Image
 
 nano Dockerfile (create docker file to create a docker image)
-
+```
 FROM openjdk: 11
 
 COPY ./usr/src/myapp
@@ -57,7 +57,7 @@ WORKDIR /usr/src/myapp
 RUN javac Main.java
 
 CMD ["java","Main"]
-
+```
 
 docker login
 
