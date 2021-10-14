@@ -29,7 +29,7 @@ ALTER USER postgres PASSWORD '7410';
 
 *Change localhost to ip of the postgresql instance in "application.properties" (if remote) 
 
-# Runing App using maven
+## Runing App using maven
 cd Cable-Operator-System
 
 mvn clean
@@ -37,6 +37,8 @@ mvn clean
 mvn install
 
 java -jar path/abc.jar
+
+## Generating Docker Image
 
 nano Dockerfile (create docker file to create a docker image)
 
