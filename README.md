@@ -71,6 +71,17 @@ spring.jpa.hibernate.ddl-auto = update
 
 server.port = 8081
 ```
+
+```
+DBHOST=a520280e3179d42b4835b381dde28753-1339284433.us-east-2.elb.amazonaws.com
+
+DBPASSWORD=passwordDBPASSWORD=password
+
+DBUSER=postgres
+
+DATABASE=OVS
+
+```
 mvn clean
 
 mvn install
@@ -89,16 +100,7 @@ ADD target/App-Tata-0.0.1-SNAPSHOT.jar
 
 ENTRYPOINT ["java","-jar","App-Tata-0.0.1-SNAPSHOT.jar"]
 ```
-```
-DBHOST=a520280e3179d42b4835b381dde28753-1339284433.us-east-2.elb.amazonaws.com
 
-DBPASSWORD=passwordDBPASSWORD=password
-
-DBUSER=postgres
-
-DATABASE=OVS
-
-```
 docker login
 
 docker build -t ayushnda7/cos:1 .
