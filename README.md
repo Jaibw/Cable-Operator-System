@@ -46,7 +46,7 @@ mvn clean
 
 mvn install
 
-java -jar path/abc.jar
+java -jar path/abc.jar (for testing)
 
 ## Generating Docker Image
 
