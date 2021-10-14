@@ -6,6 +6,8 @@ sudo apt-get update
 sudo apt-get -y upgrade
 
 ## Installing Github and Cloning Repo
+git --version
+
 sudo apt-get install git 
 
 git clone https://github.com/Ayushnda7/Cable-Operator-System
