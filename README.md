@@ -41,7 +41,36 @@ ALTER USER postgres PASSWORD '7410';
 
 ## Runing App using maven
 cd Cable-Operator-System
+change application.properties
+```
+## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
 
+spring.datasource.url = jdbc:postgresql://${DBHOST}:5432/${DATABASE}
+
+spring.datasource.username = ${DBUSER}
+
+spring.datasource.password = ${DBPASSWORD}
+
+ #jdbc:postgresql://127.0.0.1:5432/dvdrental
+
+
+
+## hibernate Properties
+
+# The SQL dialect makes Hibernate generate better SQL for the chosen database
+
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+
+ 
+
+# hibernate ddl auto (create, create-drop, validate, update)
+
+#spring.jpa.hibernate.ddl-auto = create
+
+spring.jpa.hibernate.ddl-auto = update
+
+server.port = 8081
+```
 mvn clean
 
 mvn install
@@ -60,11 +89,20 @@ ADD target/App-Tata-0.0.1-SNAPSHOT.jar
 
 ENTRYPOINT ["java","-jar","App-Tata-0.0.1-SNAPSHOT.jar"]
 ```
+```
+DBHOST=a520280e3179d42b4835b381dde28753-1339284433.us-east-2.elb.amazonaws.com
 
+DBPASSWORD=passwordDBPASSWORD=password
+
+DBUSER=postgres
+
+DATABASE=OVS
+
+```
 docker login
 
-docker build -t myapp-ayush:1 .
+docker build -t ayushnda7/cos:1 .
 
-docker run -it --rm myapp-ayush:1
+docker run -it --rm ayushnda7/cos:1
 
 docker push ayushnda7/myapp-ayush:1
