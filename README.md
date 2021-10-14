@@ -56,9 +56,9 @@ FROM openjdk:11
 
 EXPOSE 8080
 
-ADD target/abc.jar
+ADD target/App-Tata-0.0.1-SNAPSHOT.jar
 
-ENTRYPOINT ["java","-jar","abc.jar"]
+ENTRYPOINT ["java","-jar","App-Tata-0.0.1-SNAPSHOT.jar"]
 ```
 
 docker login
