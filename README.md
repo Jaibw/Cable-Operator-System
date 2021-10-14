@@ -12,35 +12,6 @@ sudo apt-get install git
 
 git clone https://github.com/Ayushnda7/Cable-Operator-System
 
-## Installing maven
-sudo apt-get install maven
-
-echo 'export M2_HOME=/opt/apache-maven-3.5.4' >> ~/.bashrc
-
-echo 'export PATH=${M2_HOME}/bin:${PATH}' >> ~/.bashrc
-
-echo 'export JAVA_HOME=/usr/lib/jvm/java-8-oracle' >> ~/.bashrc
-
-mvn -v
-
-## Installing a postgressql
-sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
-
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-
-sudo apt-get update
-
-sudo apt-get -y install postgresql
-
-## Setingup a postgressql
-sudo -u postgres psql postgres
-
-ALTER USER postgres PASSWORD '7410';
-
-*Change localhost to ip of the postgresql instance in "application.properties" (if remote) 
-
-## Runing App using maven
-cd Cable-Operator-System
 change application.properties
 ```
 ## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
@@ -82,6 +53,37 @@ DBUSER=postgres
 DATABASE=OVS
 
 ```
+
+## Installing maven
+sudo apt-get install maven
+
+echo 'export M2_HOME=/opt/apache-maven-3.5.4' >> ~/.bashrc
+
+echo 'export PATH=${M2_HOME}/bin:${PATH}' >> ~/.bashrc
+
+echo 'export JAVA_HOME=/usr/lib/jvm/java-8-oracle' >> ~/.bashrc
+
+mvn -v
+
+## Installing a postgressql
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+
+sudo apt-get update
+
+sudo apt-get -y install postgresql
+
+## Setingup a postgressql
+sudo -u postgres psql postgres
+
+ALTER USER postgres PASSWORD '7410';
+
+*Change localhost to ip of the postgresql instance in "application.properties" (if remote) 
+
+## Runing App using maven
+cd Cable-Operator-System
+
 mvn clean
 
 mvn install
