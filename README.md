@@ -109,4 +109,4 @@ docker build -t ayushnda7/cos:1 .
 
 docker run -it --rm ayushnda7/cos:1
 
-docker push ayushnda7/myapp-ayush:1
+docker push ayushnda7/cos:1
