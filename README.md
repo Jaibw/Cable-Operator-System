@@ -21,6 +21,8 @@ echo 'export PATH=${M2_HOME}/bin:${PATH}' >> ~/.bashrc
 
 echo 'export JAVA_HOME=/usr/lib/jvm/java-8-oracle' >> ~/.bashrc
 
+mvn -v
+
 ## Installing a postgressql
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 
