@@ -47,7 +47,7 @@ server.port = 8081
 export DATABASE=cable-operator-management-system-db
 export DBUSER=postgres
 export DBPORT=31399
-export DBPASSWORD=NTgSEe4uW7AymGWm
+export DBPASSWORD=password
 export DBHOST=34.237.143.208
 
 ```
