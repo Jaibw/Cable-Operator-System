@@ -12,7 +12,7 @@ sudo apt-get install git
 
 git clone https://github.com/Ayushnda7/Cable-Operator-System
 
-change application.properties
+## change application.properties
 ```
 ## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
 
