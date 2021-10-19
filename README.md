@@ -42,15 +42,13 @@ spring.jpa.hibernate.ddl-auto = update
 
 server.port = 8081
 ```
-
+## Database Env Variables
 ```
-DBHOST=a520280e3179d42b4835b381dde28753-1339284433.us-east-2.elb.amazonaws.com
-
-DBPASSWORD=passwordDBPASSWORD=password
-
-DBUSER=postgres
-
-DATABASE=OVS
+export DATABASE=cable-operator-management-system-db
+export DBUSER=postgres
+export DBPORT=31399
+export DBPASSWORD=NTgSEe4uW7AymGWm
+export DBHOST=34.237.143.208
 
 ```
 
