@@ -16,7 +16,7 @@ change application.properties
 ```
 ## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
 
-spring.datasource.url = jdbc:postgresql://${DBHOST}:5432/${DATABASE}
+spring.datasource.url = jdbc:postgresql://${DBHOST}:${DBPORT}/${DATABASE}
 
 spring.datasource.username = ${DBUSER}
 
