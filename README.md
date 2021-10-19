@@ -75,10 +75,6 @@ sudo apt-get -y install postgresql
 ## Setingup a postgressql
 sudo -u postgres psql postgres
 
-ALTER USER postgres PASSWORD '7410';
-
-*Change localhost to ip of the postgresql instance in "application.properties" (if remote) 
-
 ## Runing App using maven
 cd Cable-Operator-System
 
