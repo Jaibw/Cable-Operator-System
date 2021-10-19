@@ -42,7 +42,7 @@ spring.jpa.hibernate.ddl-auto = update
 
 server.port = 8081
 ```
-## Database Env Variables
+## Database Env Variables(Linux)
 ```
 export DATABASE=cable-operator-management-system-db
 export DBUSER=postgres
