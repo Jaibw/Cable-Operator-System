@@ -88,6 +88,10 @@ mvn install
 
 java -jar path/abc.jar (for testing)
 
+or
+
+mvn spring-boot:run
+
 ## Docker Install
 
 sudo apt-get update
