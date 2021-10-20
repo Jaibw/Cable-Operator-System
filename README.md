@@ -86,6 +86,8 @@ mvn clean
 
 mvn install
 
+mvn install -DskipTests
+
 java -jar path/abc.jar (for testing)
 
 or
