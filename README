@@ -8,7 +8,7 @@ docker inspect postgres-db | grep -i ipaddress
 
 ## DOWNLOADING SOURCE CODE 
 cd ~
-git clone https://github.com/Ayushnda7/Cable-Operator-System.git
+git clone https://github.com/Jaibw/Cable-Operator-System.git
 
 ## INSTALL DEPENDENCIES AND VARIABLES 
 sudo apt install openjdk-11-jdk-headless
