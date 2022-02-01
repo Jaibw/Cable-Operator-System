@@ -1,6 +1,6 @@
 FROM openjdk:11
 
-EXPOSE 8080
+EXPOSE 8081
 
 ARG JAR_FILE=target/*.jar
 
