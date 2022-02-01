@@ -1,0 +1,36 @@
+# Cable-Operator-System
+
+## SETTING POSTGRES DB
+docker run --name postgres-db -e POSTGRES_PASSWORD=password -d postgres
+docker inspect postgres-db | grep -i ipaddress
+
+172.##.##.##
+
+## DOWNLOADING SOURCE CODE 
+cd ~
+git clone https://github.com/Ayushnda7/Cable-Operator-System.git
+
+## INSTALL DEPENDENCIES AND VARIABLES 
+sudo apt install openjdk-11-jdk-headless
+sudo apt install maven
+export DBHOST=172.##.##.##
+export DBPORT=5432
+export DATABASE=postgres
+export DBUSER=postgres
+export DBPASSWORD=password
+
+## BUILD AND TEST APP 
+cd ~/Cable-Operator-System
+mvn install
+ls target/*.jar
+
+## BUILDING DOCKER IMAGES 
+cat Dockerfile
+docker build -t cos:1 .
+docker images 
+
+## RUN CONTAINER 
+docker run --name cos-v1 -p 8081:8081 -e DBHOST=172.17.0.2 -e DBPORT=5432 -e DATABASE=postgres -e DBUSER=postgres -e  DBPASSWORD=password -d cos:1
+
+## OPEN APP IN CHROME 
+Open your app http://<public-ip>:8081/swagger-ui.html
