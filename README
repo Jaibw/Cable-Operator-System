@@ -30,7 +30,7 @@ docker build -t cos:1 .
 docker images 
 
 ## RUN CONTAINER 
-docker run --name cos-v1 -p 8081:8081 -e DBHOST=172.17.0.2 -e DBPORT=5432 -e DATABASE=postgres -e DBUSER=postgres -e  DBPASSWORD=password -d cos:1
+docker run --name cos-v1 -p 8081:8081 -e DBHOST=172.##.##.## -e DBPORT=5432 -e DATABASE=postgres -e DBUSER=postgres -e  DBPASSWORD=password -d cos:1
 
 ## OPEN APP IN CHROME 
 Open your app http://<public-ip>:8081/swagger-ui.html
